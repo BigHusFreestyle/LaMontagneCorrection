@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "inter-bold";
+  src: url(../fonts/Inter-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "merri";
+  src: url(../fonts/Merriweather-Light.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* permet de defiler sur le lien suivant en douceur */
+}
+
+li {
+  list-style: none;
+  /*permet de retiré les point dans les listes */
+}
+
+a, a:visited {
+  color: rgb(243, 243, 243);
+  /* permet de retiré les couleurs quand ton décide de cliquer dessus ou non */
+}
+
+body {
+  background: url(../img/bg.jpg) center/cover fixed;
+  /* toujour mettre cela pour le background la pluspart du temp cela permettra aucun souci */
+  text-align: center;
+  /* centré les texte du site */
+  font-family: merri, serif;
+  max-width: 1300px;
+  /* max-width: donne la taille maximal de notre contenue, --> penser a mettre le margin en 0 auto */
+  margin: 0 auto;
+  /*  ------> pour créer l'annimation de l'écran noir a l'arriver du site, créer un before au body */
+}
+body::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(17, 17, 17);
+  -webkit-animation: animBefore 1.5s ease forwards;
+          animation: animBefore 1.5s ease forwards;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  /*-------> nous allons lui créer une animation donc une @keyframes <-----
+  --------> pour cet exemple ont la nome animeBefore
+  --------> et ont va lui dire d'aller jusqu'a,  dont "to" 
+  --------> ensuite nous alons le mettre dans notre before ----> animation: animBefore 1.5s ease;
+  ---> mettre forwards pour lui dire de rester dans l'état qu'il est a la fin de l'animation.
+  */
+}
+@-webkit-keyframes animBefore {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes animBefore {
+  to {
+    opacity: 0;
+  }
+}
+
+.btn {
+  background: none;
+  border: solid 2px rgb(17, 17, 17);
+  height: 45px;
+  width: 170px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-family: inter-bold, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+img {
+  width: 50%;
+}/*# sourceMappingURL=index.css.map */
