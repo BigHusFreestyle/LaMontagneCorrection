@@ -61,20 +61,20 @@ body {
             animation: animBefore 1.5s ease forwards;
             animation-delay: 0.15s;
 
-        /*-------> nous allons lui créer une animation donc une @keyframes <-----
-        --------> pour cet exemple ont la nome animeBefore
-        --------> et ont va lui dire d'aller jusqu'a,  dont "to" 
-        --------> ensuite nous alons le mettre dans notre before ----> animation: animBefore 1.5s ease;
-        ---> mettre forwards pour lui dire de rester dans l'état qu'il est a la fin de l'animation.
-        */
+         /*-------> nous allons lui créer une animation donc une @keyframes <-----
+            --------> pour cet exemple ont la nome animeBefore
+         --------> et ont va lui dire d'aller jusqu'a,  dont "to" 
+         --------> ensuite nous alons le mettre dans notre before ----> animation: animBefore 1.5s ease;
+          ---> mettre forwards pour lui dire de rester dans l'état qu'il est a la fin de l'animation.
+            */
 
 
-        @keyframes animBefore {
-            to {
-                opacity: 0;
+            @keyframes animBefore {
+                 to {
+                    opacity: 0;
+                 }
+
             }
-
-        }
         }
 }
 .btn {
@@ -89,7 +89,7 @@ body {
 
     &:hover {
         transform: scale(1.05);
-        /* agrandit legerement le boutton quand ont passe le pointeur dessus ---> penser a mettre la transition */>
+        /* agrandit legerement le boutton quand ont passe le pointeur dessus ---> penser a mettre la transition */
     }
 }
 
